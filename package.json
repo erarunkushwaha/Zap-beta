@@ -1,0 +1,23 @@
+{
+  "name": "zap-beta",
+  "version": "1.0.0",
+  "description": "this is light-weight version of zapier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts"
+  },
+  "author": "Arun kushwaha",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "prisma": "^6.19.0"
+  }
+}
