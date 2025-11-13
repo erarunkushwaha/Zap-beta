@@ -5,8 +5,7 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -39,7 +38,7 @@ model Trigger {
   zapId       String  @unique
   triggerId   String
   metadata    Json  @default("{}")
-  type  AvailableTrigger @relation(fields: [triggerId], references: [id])
+  type  AvailableTrigger? @relation(fields: [triggerId], references: [id])
   zap  Zap                @relation(fields: [zapId], references: [id])
 }
 

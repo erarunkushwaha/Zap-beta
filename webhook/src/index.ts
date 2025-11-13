@@ -9,7 +9,6 @@ dotenv.config();
 const app = express();
 
 
-
 const prisma = new PrismaClient()
 
 // Custom middleware to log HTTP requests
@@ -18,26 +17,31 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/hooks/catch/:userId/:zapId", async (req, res) => {
-  const {userId, zapId} = req.params;
-  const {body} = req.body
-
-  // store in db a new trigger
+  const {zapId} = req.params;
+  const body = req.body
+try{
+    // store in db a new trigger
   await prisma.$transaction( async (tx:Prisma.TransactionClient) => {
 
     const run = await tx.zapRun.create({
       data:{
         zapId:zapId,
-        metaData:body
+        metadata:body
       }
     })
     await tx.zapRunOutbox.create({
       data:{
-        zapRunid:run.id
+        zapRunId:run.id
       }
     });
   })
 
   res.status(200).json({ msg: "webhook received!" });
+} catch(error) {
+
+  console.log("error::",error)
+
+}
 });
 
 const port = process.env.PORT || 3002;
