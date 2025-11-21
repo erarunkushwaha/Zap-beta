@@ -42,12 +42,8 @@ export default function Footer() {
             © 2025 Zap-Beta. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <button className="text-gray-600 hover:text-gray-900">
-              Privacy
-            </button>
-            <button className="text-gray-600 hover:text-gray-900">Terms</button>
-            <button className="text-gray-600 hover:text-gray-900">
-              Security
+            <button className="text-gray-600 hover:text-gray-900 text-sm">
+              {"Code->Break->Fix->Learn->Repeat. = Great products scale"}
             </button>
           </div>
         </div>

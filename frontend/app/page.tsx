@@ -18,16 +18,25 @@ export default function Home() {
   return (
     <main className="w-full bg-white">
       <Header />
-      <Hero />
-      <FeaturedBanner />
-      <Products />
-      <Workflows />
+      <div className="px-28 ">
+        <div className="border-x">
+          <Hero />
+          <FeaturedBanner />
+          <Products />
+          <Workflows />
+        </div>
+      </div>
       <Statistics />
-      <Templates />
-      <RealTeams />
-      <Automation />
+      <div className="px-28 ">
+        <div className="border-x">
+          <Templates />
+          <RealTeams />
+          <Automation />
+          <Integration />
+        </div>
+      </div>
       {/* <Subscription /> */}
-      <Integration />
+
       <Footer />
     </main>
   );
