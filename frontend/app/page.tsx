@@ -26,7 +26,7 @@ export default function Home() {
       <Templates />
       <RealTeams />
       <Automation />
-      <Subscription />
+      {/* <Subscription /> */}
       <Integration />
       <Footer />
     </main>

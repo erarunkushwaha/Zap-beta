@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zapier - The Most Connected AI Orchestration Platform",
+  title: "Zap-Beta - The Light Weight Version of Zapier",
   description:
-    "Build and ship AI workflows in minutes. No IT bottlenecks, no complexity. Just results.",
+    "Zap-Beta is a light-weight version of Zapier that allows you to build and ship AI workflows in minutes. No IT bottlenecks, no complexity. Just results.",
 };
 
 export default function RootLayout({
