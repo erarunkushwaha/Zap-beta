@@ -2,8 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
   return (
     <section className="relative min-h-screen flex items-center justify-between overflow-hidden bg-white">
       {/* Left side content */}
@@ -20,7 +22,10 @@ export default function Hero() {
             complexity. Just results.
           </p>
           <div className="flex items-center gap-4 mb-12">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-base">
+            <Button
+              className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-base"
+              onClick={() => router.push("/login")}
+            >
               Start free with email
             </Button>
           </div>

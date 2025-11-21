@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <header className="border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -13,10 +15,16 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <button className="text-sm text-gray-700 hover:text-gray-900">
+          <button
+            className="text-sm text-gray-700 hover:text-gray-900"
+            onClick={() => router.push("/login")}
+          >
             Log in
           </button>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6">
+          <Button
+            className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
+            onClick={() => router.push("/signup")}
+          >
             Sign up
           </Button>
         </div>
