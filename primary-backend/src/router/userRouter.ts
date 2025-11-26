@@ -3,6 +3,7 @@ import { Request, Response, Router } from "express";
 const router = Router();
 
 router.post("/signup", (req: Request, res: Response) => {
+  const { email, password, name } = req.body;
   console.log("signup");
 });
 
